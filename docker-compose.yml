@@ -1,0 +1,15 @@
+version: '3'
+services:
+  dev-postgres:
+    image: postgres:14.4-alpine
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: izuku
+      POSTGRES_PASSWORD: izuku
+      POSTGRES_DB: izuku
+    restart: always
+    networks:
+      - lesson
+networks:
+  lesson:
